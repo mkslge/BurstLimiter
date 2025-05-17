@@ -10,14 +10,18 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 #include <iostream>
+#include "message.h"
 
 
 class Client {
 private:
-    int messageCount;
-    sockaddr_in *client;
+    int message_count;
+    sockaddr_in *client_info;
+    vector<Message&> messages;
 
-public:Client();
+public:
+    Client();
+    ~Client();
 
     bool addMessage();
     int getMessageCount();

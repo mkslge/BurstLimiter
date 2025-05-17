@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(untitled main.cpp
         client.cpp
         client.h
+        message.cpp
+        message.h
 )
