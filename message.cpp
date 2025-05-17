@@ -3,3 +3,17 @@
 //
 
 #include "message.h"
+
+
+Message::Message(string content, time_t* timestamp, bool status) {
+    this->content = content;
+    this->timestamp = timestamp;
+    this->status = status;
+}
+
+Message::~Message() {
+    delete this->timestamp;
+    delete this->content;
+}
+
+
