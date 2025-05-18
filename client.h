@@ -21,10 +21,11 @@ private:
 
 public:
     Client();
+    Client(sockaddr_in *client_info);
     ~Client();
 
-    bool addMessage();
-    int getMessageCount();
+    bool add_message();
+    int get_message_count();
 
 };
 

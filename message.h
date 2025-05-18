@@ -18,6 +18,21 @@ public:
     Message(string content, time_t* timestamp, bool status);
     ~Message();
 
+    string get_content();
+    bool get_status();
+    time_t* get_timestamp();
+
+
+    void set_content(string content);
+    void set_timestamp(time_t* timestamp);
+    void set_status(bool status);
+
+
+
+
+
+
+
 };
 
 
