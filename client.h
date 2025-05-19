@@ -17,15 +17,20 @@ class Client {
 private:
     int message_count;
     sockaddr_in *client_info;
-    vector<Message&> messages;
+    vector<Message> messages;
 
 public:
     Client();
     Client(sockaddr_in *client_info);
     ~Client();
 
-    bool add_message();
+    void add_message(Message &message);
+
     int get_message_count();
+
+    sockaddr_in* get_client_info();
+    vector<Message> get_messages();
+    Message get_message(int index);
 
 };
 
