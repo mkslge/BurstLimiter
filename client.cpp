@@ -19,6 +19,7 @@ Client::Client(sockaddr_in* socket) {
 }
 
 Client::~Client() {
+
 }
 
 
