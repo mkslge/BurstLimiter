@@ -14,7 +14,7 @@ class Client_list {
 private:
     unordered_map<string, Client*> clients;
     int max_messages;
-    double timeframe;
+    double burst_timeframe;
 
 
     public:
