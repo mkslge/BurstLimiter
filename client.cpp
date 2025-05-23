@@ -50,3 +50,9 @@ Message Client::get_message(int index) {
     return this->messages[index];
 }
 
+
+void Client::set_burst_time_start() {
+    *this->burst_time_start = time(NULL);
+}
+
+

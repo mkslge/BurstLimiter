@@ -18,7 +18,7 @@ private:
     int message_count;
     sockaddr_in *client_info;
     vector<Message> messages;
-
+    time_t* burst_time_start;
 public:
     Client();
     Client(sockaddr_in *client_info);
@@ -32,6 +32,7 @@ public:
     vector<Message> get_messages();
     Message get_message(int index);
 
+    void set_burst_time_start();
 };
 
 

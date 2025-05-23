@@ -22,8 +22,13 @@ private:
     ~Client_list();
 
     bool contains_client(string ip_address);
-    void Client_list::add_client(Client* client, string ip);
     bool Client_list::client_limit_hit(string ip);
+
+    void Client_list::add_client(Client* client, string ip);
+    void increase_message_count(string ip);
+
+
+
 
     Client get_client(string ip_address);
 };
