@@ -23,9 +23,8 @@ private:
 
     bool contains_client(string ip_address);
     void Client_list::add_client(Client* client, string ip);
-    bool Client_list::client_threshold(Client* client, string ip);
+    bool Client_list::client_limit_hit(string ip);
 
-    Client get_client(int index);
     Client get_client(string ip_address);
 };
 
