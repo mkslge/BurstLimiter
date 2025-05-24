@@ -2,7 +2,7 @@
 // Created by Mark on 5/19/25.
 //
 
-#include "client_list.h"
+#include "client_manager.h"
 
 
 
@@ -64,7 +64,18 @@ Client Client_list::get_client(const string ip_address) {
     return *client;
 }
 
-Client clien
+//client only needs an update if the last message sent was not within the burst timeframe
+/*PRE CONDITION: message needs to have just been received from iP */
+bool Client_list::check_if_client_needs_update(string ip) {
+    if (clients.find(ip) == clients.end()) {
+        return true; //if we dont find the iP yet we need to add the ip and then update it
+    } else {
+        //now we need to check when the last message was sent
+        Client* client = this->clients.find(ip)->second;
+
+
+    }
+}
 
 
 

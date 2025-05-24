@@ -8,6 +8,6 @@ add_executable(untitled main.cpp
         client.h
         message.cpp
         message.h
-        client_list.cpp
-        client_list.h
+        client_manager.cpp
+        client_manager.h
 )

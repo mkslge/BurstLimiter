@@ -18,15 +18,17 @@ private:
 
 
     public:
-    Client_list::Client_list(int max_messages, double timeframe);
+    Client_list(int max_messages, double timeframe);
     ~Client_list();
 
     bool contains_client(string ip_address);
-    bool Client_list::client_limit_hit(string ip);
+    bool client_limit_hit(string ip);
 
-    void Client_list::add_client(Client* client, string ip);
+    void add_client(Client* client, string ip);
     void increase_message_count(string ip);
 
+
+    bool check_if_client_needs_update(string ip);
 
 
 
