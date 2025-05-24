@@ -74,6 +74,13 @@ bool Client_list::check_if_client_needs_update(string ip) {
         Client* client = this->clients.find(ip)->second;
 
 
+        time_t* burst_start = client->get_burst_time_start();
+        time_t current_time = time(nullptr);
+
+
+        //if the time difference is more than the burst time_frame than we need to update the burst time
+        //otherwise we can simply increment the number of messages, this can be done in another function
+        return current_time - *burst_start > burst_timeframe;
     }
 }
 

@@ -32,6 +32,8 @@ public:
     vector<Message> get_messages();
     Message get_message(int index);
 
+
+    time_t* get_burst_time_start();
     void set_burst_time_start();
 };
 

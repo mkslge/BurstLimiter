@@ -56,3 +56,8 @@ void Client::set_burst_time_start() {
 }
 
 
+time_t* Client::get_burst_time_start() {
+    return this->burst_time_start;
+}
+
+
